@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/innocrypto-ico/static/css/main.a617e044.chunk.css",
+    "main.js": "/innocrypto-ico/static/js/main.41cb09b9.chunk.js",
+    "main.js.map": "/innocrypto-ico/static/js/main.41cb09b9.chunk.js.map",
+    "runtime-main.js": "/innocrypto-ico/static/js/runtime-main.505c83ea.js",
+    "runtime-main.js.map": "/innocrypto-ico/static/js/runtime-main.505c83ea.js.map",
+    "static/js/2.d3de49f0.chunk.js": "/innocrypto-ico/static/js/2.d3de49f0.chunk.js",
+    "static/js/2.d3de49f0.chunk.js.map": "/innocrypto-ico/static/js/2.d3de49f0.chunk.js.map",
+    "static/js/3.37a2587b.chunk.js": "/innocrypto-ico/static/js/3.37a2587b.chunk.js",
+    "static/js/3.37a2587b.chunk.js.map": "/innocrypto-ico/static/js/3.37a2587b.chunk.js.map",
+    "index.html": "/innocrypto-ico/index.html",
+    "static/css/main.a617e044.chunk.css.map": "/innocrypto-ico/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.d3de49f0.chunk.js.LICENSE.txt": "/innocrypto-ico/static/js/2.d3de49f0.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/innocrypto-ico/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.505c83ea.js",
+    "static/js/2.d3de49f0.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.41cb09b9.chunk.js"
+  ]
+}
