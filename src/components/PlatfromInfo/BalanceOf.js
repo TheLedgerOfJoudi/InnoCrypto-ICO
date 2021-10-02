@@ -1,13 +1,13 @@
 import React from "react";
 import Web3 from "web3";
-import { ABI, TOKEN_ADDRESS } from "../config";
+import { ABI, TOKEN_ADDRESS } from "../../config";
+let decimals
 class BalanceOf extends React.Component{
 constructor(){
     super()
     this.state = {
         address:"",
         numOfTokens:"",
-        totalTokenSupply:"",
         decimals : ""
     }
     this.handleChange = this.handleChange.bind(this)
@@ -15,35 +15,8 @@ constructor(){
 }
 
 componentDidMount(){
-this.getTotalSupply()
-this.getDecimals()
+
 }
-
-async getTotalSupply (){
-    const web3 = new Web3(Web3.givenProvider)
-     await web3.eth.getAccounts().then((accounts)=>{
-        const Contract = new web3.eth.Contract(ABI, TOKEN_ADDRESS)
-        Contract.methods.totalSupply().call({from:accounts[0]})
-        .then((res)=>{
-            this.setState({
-                totalTokenSupply : res
-            })
-        })
-    })
-    }
-
-    async getDecimals (){
-        const web3 = new Web3(Web3.givenProvider)
-         await web3.eth.getAccounts().then((accounts)=>{
-            const Contract = new web3.eth.Contract(ABI, TOKEN_ADDRESS)
-            Contract.methods.decimals().call({from:accounts[0]})
-            .then((res)=>{
-                this.setState({
-                    decimals : res
-                })
-            })
-        })
-        }
 
 handleChange(event){
 this.setState({
@@ -59,7 +32,7 @@ handleSubmit(event){
         Contract.methods.balanceOf(this.state.address).call({from : accounts[0]})
         .then(res => {
             this.setState({
-                numOfTokens : res / (10 ** this.state.decimals) + "." + res % (10 ** this.state.decimals)
+                numOfTokens : res / (10 ** this.props.decimals) + "." + res % (10 ** this.props.decimals)
             })
         })
     }))
@@ -80,3 +53,4 @@ render(){
 }
 }
 export default BalanceOf;
+export const DECIMALS = decimals
