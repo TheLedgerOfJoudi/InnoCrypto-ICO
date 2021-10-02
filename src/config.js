@@ -1,4 +1,5 @@
-export const TOKEN_ADDRESS = "0xD840379F69F976B0823E5a72dDA7d10474CA9547"
+import Web3 from "web3";
+export const TOKEN_ADDRESS = "0xDD562C64aD1B2759bD4142F7a88a2e7C126981DF"
 export const ABI = [
 	{
 		"inputs": [
@@ -299,3 +300,5 @@ export const ABI = [
 		"type": "function"
 	}
 ]
+
+

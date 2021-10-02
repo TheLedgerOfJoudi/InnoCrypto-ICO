@@ -25,11 +25,9 @@ class Transfer extends React.Component{
         event.preventDefault()
         const web3 = new Web3(Web3.givenProvider)
         web3.eth.getAccounts().then(accounts =>{
-            console.log(accounts[0])
             const Contract = new web3.eth.Contract(ABI, TOKEN_ADDRESS)
-            console.log(this.state)
             Contract.methods.transfer(this.state.receiver, this.state.numOfTokens)
-            .call({from : accounts[0]}).then((res) => {console.log(res)})
+            .send({from : accounts[0]}).then(() => {})
         })
 
     }
