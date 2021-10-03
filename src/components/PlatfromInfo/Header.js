@@ -25,7 +25,9 @@ constructor(){
         return(
             <div>
                 <h1>Welcome to InnoCrypto ICO!</h1>
+                <hr/>
                 <h2>You are on network : {this.state.network}</h2>
+                <h3> ICO's info</h3>
             </div>
         )
     }

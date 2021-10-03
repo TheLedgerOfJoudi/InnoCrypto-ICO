@@ -49,7 +49,7 @@ render(){
         <div>
         <Header/>
         <BalanceOf decimals = {this.state.decimals} totalTokenSupply = {this.state.totalTokenSupply} />
-        <TokensSoldBar totalTokenSupply = {this.state.totalTokenSupply}/>
+        <TokensSoldBar decimals = {this.state.decimals} totalTokenSupply = {this.state.totalTokenSupply}/>
         </div>
     )
 }

@@ -47,17 +47,18 @@ async getOwnerBalance(){
         Contract.methods.balanceOf(this.state.ownerAddress)
         .call({from:accounts[0]}).then((res)=>{
            this.setState({
-               ownerBalance : res
+               ownerBalance : res / (10 ** this.props.decimals) + "." + res % (10 ** this.props.decimals)
            }) 
         }
         )
     })
 }
     render(){
-        
+        console.log(this.state.ownerBalance)
+        console.log(this.props.totalTokenSupply)
         return(
             <div>
-                "bla bla" / {this.props.totalTokenSupply} have been sold!
+                {this.props.totalTokenSupply - this.state.ownerBalance} / {this.props.totalTokenSupply} have been sold!
             </div>
         )
     }

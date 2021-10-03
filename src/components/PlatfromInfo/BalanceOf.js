@@ -14,10 +14,6 @@ constructor(){
     this.handleSubmit = this.handleSubmit.bind(this)
 }
 
-componentDidMount(){
-
-}
-
 handleChange(event){
 this.setState({
     address : event.target.value

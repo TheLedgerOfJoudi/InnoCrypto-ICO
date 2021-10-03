@@ -1,5 +1,5 @@
 
-export const TOKEN_ADDRESS = "0xDD562C64aD1B2759bD4142F7a88a2e7C126981DF"
+export const TOKEN_ADDRESS = "0x17aE39bEF917A5eB2D5Fe7C63e9Ee53B72545d61"
 export const ABI = [
 	{
 		"inputs": [
@@ -300,5 +300,3 @@ export const ABI = [
 		"type": "function"
 	}
 ]
-
-

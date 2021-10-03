@@ -1,8 +1,8 @@
 import React from "react";
 import Web3 from "web3";
-import { ABI, TOKEN_ADDRESS } from "../config";
+import { ABI, TOKEN_ADDRESS } from "../../config";
 
-class Transfer extends React.Component{
+class TransferForm extends React.Component{
     constructor(){
         super()
         this.state = {
@@ -37,14 +37,14 @@ class Transfer extends React.Component{
         <form onSubmit = {this.handleSubmit}>
             <input type = "text" 
             name = "receiver"
-            placeholder = "To whom you want to send" 
+            placeholder = "Receiver" 
             value = {this.state.receiver} 
             onChange = {this.handleChange}
             />
             
             <input type = "text"
             name = "numOfTokens" 
-            placeholder = "How much are you willing to send" 
+            placeholder = "Amount" 
             value = {this.state.numOfTokens}
             onChange = {this.handleChange}
             />
@@ -54,4 +54,4 @@ class Transfer extends React.Component{
         )
     }
 }
-export default Transfer
+export default TransferForm
