@@ -87,7 +87,7 @@ contract InnoCrypto {
         uint256 numOfTokens
         ) public payable returns(bool) {
             require(numOfTokens <= balances[owner]);
-            require(msg.value == numOfTokens * 0.0025 ether);
+            require(msg.value == (numOfTokens / (10 ** decimals)) * 0.0025 ether);
             balances[owner] = balances[owner].sub(numOfTokens);
             balances[msg.sender] = balances[msg.sender].add(numOfTokens);
              emit Transfer(owner, msg.sender, numOfTokens);
