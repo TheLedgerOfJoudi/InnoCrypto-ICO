@@ -1,7 +1,7 @@
 import React from "react";
 import Web3 from "web3";
 import { ABI, TOKEN_ADDRESS } from "../../config";
-let decimals
+
 class BalanceOf extends React.Component{
 constructor(){
     super()
@@ -49,4 +49,4 @@ render(){
 }
 }
 export default BalanceOf;
-export const DECIMALS = decimals
+
