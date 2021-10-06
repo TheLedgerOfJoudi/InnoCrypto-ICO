@@ -74,6 +74,7 @@ class GetAllowance extends React.Component {
                             value={this.state.delegate}
                             onChange={this.handleChange} />
 
+                        <br/>
                         <button type="submit">Get Allowance</button>
                     </form>
                 </div>

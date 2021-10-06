@@ -2,8 +2,8 @@ import React from "react"
 import Web3 from "web3"
 import { ABI, TOKEN_ADDRESS } from "../../config"
 import Header from "./Header"
-import BalanceOf from "./BalanceOf"
 import TokensSoldBar from "./TokensSoldBar"
+import GetBalance from "./GetBalance"
 class Info extends React.Component {
     constructor() {
         super()
@@ -48,7 +48,7 @@ class Info extends React.Component {
         return (
             <div>
                 <Header />
-                <BalanceOf decimals={this.state.decimals} totalTokenSupply={this.state.totalTokenSupply} />
+                <GetBalance decimals={this.state.decimals} totalTokenSupply={this.state.totalTokenSupply} />
                 <TokensSoldBar decimals={this.state.decimals} totalTokenSupply={this.state.totalTokenSupply} />
                 <hr />
             </div>

@@ -2,7 +2,7 @@ import React from "react";
 import Web3 from "web3";
 import { ABI, TOKEN_ADDRESS } from "../../config";
 
-class BalanceOf extends React.Component {
+class GetBalance extends React.Component {
     constructor() {
         super()
         this.state = {
@@ -44,6 +44,7 @@ class BalanceOf extends React.Component {
                 <div>
                     <form onSubmit={this.handleSubmit}>
                         <input type="text" value={this.state.address} onChange={this.handleChange} />
+                        <br/>                       
                         <button type="submit">Get Balance</button>
                     </form>
                     <h3>
@@ -55,10 +56,11 @@ class BalanceOf extends React.Component {
         else return (
             <form onSubmit={this.handleSubmit}>
                 <input type="text" value={this.state.address} onChange={this.handleChange} />
+                <br/>
                 <button type="submit">Get Balance</button>
             </form>
         )
     }
 }
-export default BalanceOf;
+export default GetBalance;
 
