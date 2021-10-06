@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/innocrypto-ico/static/css/main.f09a1402.chunk.css",
-    "main.js": "/innocrypto-ico/static/js/main.24ee420a.chunk.js",
-    "main.js.map": "/innocrypto-ico/static/js/main.24ee420a.chunk.js.map",
+    "main.js": "/innocrypto-ico/static/js/main.04a9ff10.chunk.js",
+    "main.js.map": "/innocrypto-ico/static/js/main.04a9ff10.chunk.js.map",
     "runtime-main.js": "/innocrypto-ico/static/js/runtime-main.43f4854e.js",
     "runtime-main.js.map": "/innocrypto-ico/static/js/runtime-main.43f4854e.js.map",
     "static/js/2.76303282.chunk.js": "/innocrypto-ico/static/js/2.76303282.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.43f4854e.js",
     "static/js/2.76303282.chunk.js",
     "static/css/main.f09a1402.chunk.css",
-    "static/js/main.24ee420a.chunk.js"
+    "static/js/main.04a9ff10.chunk.js"
   ]
 }
