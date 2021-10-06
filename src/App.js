@@ -6,9 +6,9 @@ import ThirdPartyPanel from './components/ThirdPartyPanel/ThirdPartyPanel';
 function App() {
   return (
     <div className="App">
-     <Info/>
-     <MyPanel/>
-     <ThirdPartyPanel/>
+      <Info />
+      <MyPanel />
+      <ThirdPartyPanel />
     </div>
   );
 }
