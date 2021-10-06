@@ -55,7 +55,7 @@ class GetBalance extends React.Component {
         }
         else return (
             <form onSubmit={this.handleSubmit}>
-                <input type="text" value={this.state.address} onChange={this.handleChange} />
+                <input type="text" placeholder = "address" value={this.state.address} onChange={this.handleChange} />
                 <br/>
                 <button type="submit">Get Balance</button>
             </form>
