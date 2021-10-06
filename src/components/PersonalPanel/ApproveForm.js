@@ -26,7 +26,8 @@ class ApproveForm extends React.Component{
         const web3 = new Web3(Web3.givenProvider)
         web3.eth.getAccounts().then(accounts =>{
             const Contract = new web3.eth.Contract(ABI, TOKEN_ADDRESS)
-            Contract.methods.approve(this.state.delegate, this.state.numOfTokens)
+            Contract.methods.approve(
+            this.state.delegate, parseInt(this.state.numOfTokens * 10**5))
             .send({from : accounts[0]}).then(() => {})
         })
 
@@ -42,7 +43,7 @@ class ApproveForm extends React.Component{
             onChange = {this.handleChange}
             />
             
-            <input type = "text"
+            <input type = "number"
             name = "numOfTokens" 
             placeholder = "Amount" 
             value = {this.state.numOfTokens}

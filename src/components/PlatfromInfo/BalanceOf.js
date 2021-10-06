@@ -8,7 +8,8 @@ constructor(){
     this.state = {
         address:"",
         numOfTokens:"",
-        decimals : ""
+        decimals : "",
+        submitted : false
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -32,19 +33,30 @@ handleSubmit(event){
             })
         })
     }))
+    this.state.submitted = true
 }
 
 render(){
+    if(this.state.submitted){
+        this.state.submitted = false
     return(
+        
         <div>
         <form onSubmit = {this.handleSubmit}>
             <input type = "text" value = {this.state.address} onChange = {this.handleChange}/>
             <button type = "submit">Get Balance</button>
-        </form>
+        </form>     
         <h3>
             this address has {this.state.numOfTokens} InnoCryptos
         </h3>
         </div>
+    )
+    }
+    else return(
+        <form onSubmit = {this.handleSubmit}>
+            <input type = "text" value = {this.state.address} onChange = {this.handleChange}/>
+            <button type = "submit">Get Balance</button>
+        </form>  
     )
 }
 }

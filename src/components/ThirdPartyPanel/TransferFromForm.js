@@ -19,15 +19,19 @@ class TransferForm extends React.Component{
         this.setState({
             [name] : value
         })
-       
+        
     }
 
     handleSubmit(event){
+        
         event.preventDefault()
         const web3 = new Web3(Web3.givenProvider)
         web3.eth.getAccounts().then(accounts =>{
             const Contract = new web3.eth.Contract(ABI, TOKEN_ADDRESS)
-            Contract.methods.transfer(this.state.owner, this.state.buyer, this.state.numOfTokens)
+            Contract.methods.transferFrom(
+                this.state.owner,
+                 this.state.buyer,
+                 parseInt(this.state.numOfTokens * 10**5))
             .send({from : accounts[0]}).then(() => {})
         })
 
@@ -40,7 +44,7 @@ class TransferForm extends React.Component{
            <input type = "text" 
             name = "owner"
             placeholder = "owner" 
-            value = {this.state.buyer} 
+            value = {this.state.owner} 
             onChange = {this.handleChange}
             />
            
@@ -51,7 +55,7 @@ class TransferForm extends React.Component{
             onChange = {this.handleChange}
             />
 
-            <input type = "text"
+            <input type = "number"
             name = "numOfTokens" 
             placeholder = "Amount" 
             value = {this.state.numOfTokens}

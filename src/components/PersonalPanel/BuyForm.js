@@ -16,27 +16,29 @@ class BuyForm extends React.Component{
         this.setState({
             [name] : value
         })
+        
     }
 
     handleSubmit(event){
         event.preventDefault()
-        let messageValue = parseInt(this.state.numOfTokens)
+        
+        let messageValue = parseInt(this.state.numOfTokens * 10**5)
         messageValue /= 10 ** this.props.decimals
         const web3 = new Web3(Web3.givenProvider)
         web3.eth.getAccounts().then((accounts)=>{
             const Contract = new web3.eth.Contract(ABI, TOKEN_ADDRESS)
-            this.setState((prevState)=>{
-               
+            console.log(parseInt(this.state.numOfTokens * 10**5))
+            Contract.methods.buy(parseInt(this.state.numOfTokens * 10 ** 5))
+            .send({from:accounts[0], value : messageValue *  0.0025 * 10 ** 18}).then((res) => {
+                console.log(res)
             })
-            Contract.methods.buy(this.state.numOfTokens)
-            .send({from:accounts[0], value : messageValue *  0.0025 * 10 ** 18}).then(() => {})
         })
     }
 
     render(){
         return(
             <form onSubmit = {this.handleSubmit}>
-                <input type = "text"
+                <input type = "number"
                 name = "numOfTokens"
                 placeholder = "Tokens to buy"
                 value = {this.state.numOfTokens}

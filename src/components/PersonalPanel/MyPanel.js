@@ -34,7 +34,9 @@ render(){
         <div>
         <h3>My panel</h3>
         <TransferForm/>
+        <br/>
         <ApproveForm/>
+        <br/>
         <BuyForm decimals = {this.state.decimals} />
         <hr/>
         </div>

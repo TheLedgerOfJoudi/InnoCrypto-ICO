@@ -54,8 +54,6 @@ async getOwnerBalance(){
     })
 }
     render(){
-        console.log(this.state.ownerBalance)
-        console.log(this.props.totalTokenSupply)
         return(
             <div>
                 {this.props.totalTokenSupply - this.state.ownerBalance} / {this.props.totalTokenSupply} have been sold!
