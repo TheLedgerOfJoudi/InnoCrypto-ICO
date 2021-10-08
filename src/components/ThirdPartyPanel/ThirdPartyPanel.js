@@ -50,7 +50,7 @@ class ThirdPartyPanel extends React.Component {
                 <h3> Third party panel </h3>
                 <GetAllowance decimals={this.state.decimals} totalTokenSupply={this.state.totalTokenSupply} />
                 <br />
-                <TransferFromForm />
+                <TransferFromForm decimals={this.state.decimals} />
                 <hr />
             </div>
         )
