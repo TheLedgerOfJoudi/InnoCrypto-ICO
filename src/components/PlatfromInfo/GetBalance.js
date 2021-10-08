@@ -8,7 +8,6 @@ class GetBalance extends React.Component {
         this.state = {
             address: "",
             numOfTokens: "",
-            decimals: "",
             submitted: false
         }
         this.handleChange = this.handleChange.bind(this)
