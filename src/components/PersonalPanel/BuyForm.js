@@ -21,8 +21,7 @@ class BuyForm extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault()
-        let messageValue = parseInt(this.state.numOfTokens * 10 ** 5)
-        messageValue /= 10 ** this.props.decimals
+        let messageValue = parseInt(this.state.numOfTokens)
         const web3 = new Web3(Web3.givenProvider)
         web3.eth.getAccounts().then((accounts) => {
             const Contract = new web3.eth.Contract(ABI, TOKEN_ADDRESS)
