@@ -30,7 +30,7 @@ class TransferForm extends React.Component {
             Contract.methods.transferFrom(
                 this.state.owner,
                 this.state.buyer,
-                parseInt(this.state.numOfTokens * 10 ** 5))
+                parseInt(this.state.numOfTokens * 10 ** this.props.decimals))
                 .send({ from: accounts[0] }).then(() => { })
         })
 
