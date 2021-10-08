@@ -25,7 +25,7 @@ class BuyForm extends React.Component {
         const web3 = new Web3(Web3.givenProvider)
         web3.eth.getAccounts().then((accounts) => {
             const Contract = new web3.eth.Contract(ABI, TOKEN_ADDRESS)
-            Contract.methods.buy(parseInt(this.state.numOfTokens * 10 ** 5))
+            Contract.methods.buy(parseInt(this.state.numOfTokens * 10 ** this.props.decimals))
                 .send({ from: accounts[0], value: messageValue * 0.0025 * 10 ** 18 }).then(() => {
                 })
         })
